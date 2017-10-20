@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>workshop.structure101</groupId>
+    <artifactId>customer-rating-service</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.8.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>core-api</module>
+        <module>persistence-api</module>
+        <module>notification-api</module>
+        <module>messaging-api</module>
+        <module>resource-api</module>
+        <module>core-impl</module>
+        <module>persistence-adapter</module>
+        <module>notification-adapter</module>
+        <module>messaging-adapter</module>
+        <module>resource-adapter</module>
+        <module>application</module>
+        <module>integration-test</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>core-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>notification-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>messaging-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>resource-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>core-impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>persistence-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>notification-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>messaging-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>resource-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>workshop.structure101</groupId>
+                <artifactId>application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
