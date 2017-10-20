@@ -1,12 +1,12 @@
 package workshop.structure101.core.impl;
 
-import java.util.Optional;
-
 import workshop.structure101.core.CustomerRating;
 import workshop.structure101.core.CustomerRatingService;
 import workshop.structure101.notification.CustomerRatingEvent;
 import workshop.structure101.notification.NotificationPort;
 import workshop.structure101.persistence.CustomerRatingRepository;
+
+import java.util.Optional;
 
 /**
  * @author Stefan Schulze, PENTASYS AG
