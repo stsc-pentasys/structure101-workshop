@@ -16,5 +16,9 @@
             <groupId>workshop.structure101</groupId>
             <artifactId>core-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+        </dependency>
     </dependencies>
 </project>
