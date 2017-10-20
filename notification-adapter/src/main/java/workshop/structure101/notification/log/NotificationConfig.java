@@ -1,6 +1,8 @@
 package workshop.structure101.notification.log;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import workshop.structure101.notification.NotificationPort;
 
 /**
  * @author Stefan Schulze, PENTASYS AG
@@ -8,4 +10,9 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class NotificationConfig {
+
+    @Bean
+    public NotificationPort notificationPort() {
+        return new LoggingNotificationAdapter();
+    }
 }

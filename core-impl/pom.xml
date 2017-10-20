@@ -17,6 +17,14 @@
             <artifactId>core-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>workshop.structure101</groupId>
+            <artifactId>notification-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>workshop.structure101</groupId>
+            <artifactId>persistence-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>

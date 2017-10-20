@@ -1,6 +1,10 @@
 package workshop.structure101.core.impl;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import workshop.structure101.core.CustomerRatingService;
+import workshop.structure101.notification.NotificationPort;
+import workshop.structure101.persistence.CustomerRatingRepository;
 
 /**
  * @author Stefan Schulze, PENTASYS AG
@@ -8,4 +12,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class CoreConfig {
+
+    @Bean
+    public CustomerRatingService customerRatingService(
+        NotificationPort notificationPort,
+        CustomerRatingRepository repository) {
+        return new CustomerRatingServiceBean(notificationPort, repository);
+    }
 }
