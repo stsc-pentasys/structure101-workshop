@@ -46,7 +46,7 @@ public class CustomerRatingServiceBean implements CustomerRatingService {
     @Override
     public Optional<CustomerRating> createNewRating(CustomerRating newRating) {
         Optional<CustomerRating> rating = repository.insert(newRating);
-        rating.ifPresent(r -> notificationPort.ratingModified(new CustomerRatingEvent(r)));
+        rating.ifPresent(r -> notificationPort.ratingCreated(new CustomerRatingEvent(r)));
         return rating;
     }
 }

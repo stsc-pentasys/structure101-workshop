@@ -35,4 +35,6 @@ public class CustomerRatingEvent {
         sb.append('}');
         return sb.toString();
     }
+
+
 }
