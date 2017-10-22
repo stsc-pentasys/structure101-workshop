@@ -14,6 +14,11 @@ import workshop.structure101.resource.CustomerRatingResource;
 public class ResourcesConfig {
 
     @Bean
+    public UriBuilder uriBuilder() {
+        return new UriBuilder();
+    }
+
+    @Bean
     public ResourceConfig resourceConfig() {
         ResourceConfig resourceConfig = new ResourceConfig();
         resourceConfig.register(ServiceExceptionMapper.class);
@@ -22,7 +27,8 @@ public class ResourcesConfig {
 
     @Bean
     public CustomerRatingResource customerRatingResource(CustomerRatingService customerRatingService) {
-        CustomerRatingResource customerRatingResource = new CustomerRatingResourceBean(customerRatingService);
+        CustomerRatingResource customerRatingResource =
+                new CustomerRatingResourceBean(customerRatingService, uriBuilder());
         resourceConfig().register(customerRatingResource);
         return customerRatingResource;
     }

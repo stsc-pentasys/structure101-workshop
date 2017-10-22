@@ -1,5 +1,7 @@
 package workshop.structure101.core;
 
+import java.util.Objects;
+
 /**
  * @author Stefan Schulze, PENTASYS AG
  * @since 20.10.2017
@@ -50,5 +52,22 @@ public class CustomerRating {
         sb.append(", score=").append(score);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomerRating that = (CustomerRating) o;
+        return Objects.equals(customerId, that.customerId) &&
+                Objects.equals(firstName, that.firstName) &&
+                Objects.equals(lastName, that.lastName) &&
+                accountType == that.accountType &&
+                score == that.score;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, firstName, lastName, accountType, score);
     }
 }

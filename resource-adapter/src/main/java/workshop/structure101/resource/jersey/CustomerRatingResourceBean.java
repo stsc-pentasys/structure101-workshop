@@ -1,6 +1,5 @@
 package workshop.structure101.resource.jersey;
 
-import java.net.URI;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
@@ -19,9 +18,11 @@ import workshop.structure101.resource.NewRatingRequest;
 public class CustomerRatingResourceBean implements CustomerRatingResource {
 
     private final CustomerRatingService customerRatingService;
+    private UriBuilder uriBuilder;
 
-    CustomerRatingResourceBean(CustomerRatingService customerRatingService) {
+    CustomerRatingResourceBean(CustomerRatingService customerRatingService, UriBuilder uriBuilder) {
         this.customerRatingService = customerRatingService;
+        this.uriBuilder = uriBuilder;
     }
 
     @Override
@@ -53,7 +54,7 @@ public class CustomerRatingResourceBean implements CustomerRatingResource {
     }
 
     @Override
-    public Response deleteExistingRating(String customerId, ModifyRatingRequest request) {
+    public Response deleteExistingRating(String customerId) {
         return customerRatingService
             .removeById(customerId)
             .map(Response::accepted)
@@ -66,15 +67,8 @@ public class CustomerRatingResourceBean implements CustomerRatingResource {
         CustomerRating customerRating = newRequestToCustomerRating(request);
         return customerRatingService
             .createNewRating(customerRating)
-            .map(cr -> Response.created(buildURI(cr, uriInfo)))
+            .map(cr -> Response.created(uriBuilder.buildURI(cr, uriInfo)))
             .orElse(Response.status(Response.Status.CONFLICT))
-            .build();
-    }
-
-    private URI buildURI(CustomerRating rating, UriInfo uriInfo) {
-        return uriInfo.getBaseUriBuilder()
-            .path(uriInfo.getPath() + "{customerId}")
-            .resolveTemplate("id", rating.getCustomerId())
             .build();
     }
 

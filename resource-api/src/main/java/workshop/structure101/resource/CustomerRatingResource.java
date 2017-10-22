@@ -34,7 +34,7 @@ public interface CustomerRatingResource {
     @DELETE
     @Path("{customerId}")
     @Produces(MediaType.APPLICATION_JSON)
-    Response deleteExistingRating(@PathParam("customerId") String customerId, ModifyRatingRequest request);
+    Response deleteExistingRating(@PathParam("customerId") String customerId);
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
