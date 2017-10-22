@@ -24,7 +24,6 @@ class DataGenerator {
         return values.get(index);
     }
 
-    @SuppressWarnings("unchecked")
     <T extends Enum<T>> T fromEnum(Class<T> type) throws ReflectiveOperationException {
         Method m = type.getMethod("values");
         T[] values = (T[]) m.invoke(null);

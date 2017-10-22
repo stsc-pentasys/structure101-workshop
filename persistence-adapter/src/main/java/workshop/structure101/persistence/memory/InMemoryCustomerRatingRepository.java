@@ -90,11 +90,14 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
 
     @Override
     public Optional<CustomerRating> insert(CustomerRating newRating) {
+        if (updated.containsKey(newRating.getCustomerId())) {
+            return Optional.empty();
+        }
         return store(newRating);
     }
 
     private Optional<CustomerRating> store(CustomerRating rating) {
-        CustomerRating put = updated.put(rating.getCustomerId(), rating);
-        return Optional.of(put);
+        updated.put(rating.getCustomerId(), rating);
+        return Optional.of(rating);
     }
 }
