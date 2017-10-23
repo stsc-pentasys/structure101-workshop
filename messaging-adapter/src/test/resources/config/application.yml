@@ -1,0 +1,9 @@
+spring:
+  activemq:
+    in-memory: true
+
+workshop:
+  structure101:
+    destinationIn: queue/CustomerRatingIn
+    destinationOut: queue/CustomerRatingOut
+    destinationError: queue/CustomerRatingError
