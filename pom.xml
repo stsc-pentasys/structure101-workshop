@@ -20,6 +20,7 @@
         <spring-boot.version>1.5.8.RELEASE</spring-boot.version>
         <!-- Override version provided by Spring Boot -->
         <assertj.version>3.8.0</assertj.version>
+        <rest-assured.version>3.0.5</rest-assured.version>
     </properties>
 
     <modules>
@@ -110,7 +111,39 @@
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${rest-assured.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.20</version>
+                    <configuration>
+                        <includes>
+                            <include>**/*IT.java</include>
+                        </includes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>integration-test</phase>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

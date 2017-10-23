@@ -28,7 +28,7 @@ public interface CustomerRatingResource {
     @PUT
     @Path("{customerId}")
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes({MediaType.APPLICATION_JSON})
+    @Consumes(MediaType.APPLICATION_JSON)
     Response putExistingRating(@PathParam("customerId") String customerId, ModifyRatingRequest request);
 
     @DELETE
@@ -38,7 +38,7 @@ public interface CustomerRatingResource {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes({MediaType.APPLICATION_JSON})
+    @Consumes(MediaType.APPLICATION_JSON)
     Response postNewRating(NewRatingRequest request, @Context UriInfo uriInfo);
 
 }
