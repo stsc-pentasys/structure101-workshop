@@ -1,11 +1,11 @@
 package workshop.structure101.persistence.memory;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import org.junit.Test;
 
 public class DataGeneratorTest {
 

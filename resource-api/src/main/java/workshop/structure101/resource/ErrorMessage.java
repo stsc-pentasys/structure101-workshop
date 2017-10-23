@@ -46,8 +46,8 @@ public class ErrorMessage {
         if (o == null || getClass() != o.getClass()) return false;
         ErrorMessage that = (ErrorMessage) o;
         return Objects.equals(errorCode, that.errorCode) &&
-                Objects.equals(errorMessage, that.errorMessage) &&
-                Objects.equals(description, that.description);
+            Objects.equals(errorMessage, that.errorMessage) &&
+            Objects.equals(description, that.description);
     }
 
     @Override

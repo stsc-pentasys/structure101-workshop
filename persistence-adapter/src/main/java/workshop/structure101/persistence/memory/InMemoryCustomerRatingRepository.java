@@ -1,15 +1,15 @@
 package workshop.structure101.persistence.memory;
 
+import java.util.Optional;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
 import workshop.structure101.core.AccountType;
 import workshop.structure101.core.CustomerRating;
 import workshop.structure101.core.Score;
 import workshop.structure101.persistence.CustomerRatingRepository;
 import workshop.structure101.persistence.PersistenceException;
-
-import java.util.Optional;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 public class InMemoryCustomerRatingRepository implements CustomerRatingRepository {
 
@@ -41,14 +41,14 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
 
     private String getFirstName(AccountType accountType, DataGenerator dataGenerator) {
         return accountType == AccountType.PRIVATE ?
-                dataGenerator.fromList(RawData.FIRST_NAMES) :
-                dataGenerator.fromList(RawData.COMPANY_NAMES);
+            dataGenerator.fromList(RawData.FIRST_NAMES) :
+            dataGenerator.fromList(RawData.COMPANY_NAMES);
     }
 
     private String getLastName(AccountType accountType, DataGenerator dataGenerator) {
         return accountType == AccountType.PRIVATE ?
-                dataGenerator.fromList(RawData.LAST_NAMES) :
-                dataGenerator.fromList(RawData.COMPANY_EXT);
+            dataGenerator.fromList(RawData.LAST_NAMES) :
+            dataGenerator.fromList(RawData.COMPANY_EXT);
     }
 
     private Score getScore(DataGenerator dataGenerator) {
@@ -67,7 +67,6 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
             throw new PersistenceException("Failed to retrieve account type");
         }
     }
-
 
 
     @Override

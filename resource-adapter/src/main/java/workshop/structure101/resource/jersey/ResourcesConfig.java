@@ -28,7 +28,7 @@ public class ResourcesConfig {
     @Bean
     public CustomerRatingResource customerRatingResource(CustomerRatingService customerRatingService) {
         CustomerRatingResource customerRatingResource =
-                new CustomerRatingResourceBean(customerRatingService, uriBuilder());
+            new CustomerRatingResourceBean(customerRatingService, uriBuilder());
         resourceConfig().register(customerRatingResource);
         return customerRatingResource;
     }

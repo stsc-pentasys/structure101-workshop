@@ -1,10 +1,15 @@
 package workshop.structure101.resource.jersey;
 
-import org.assertj.core.api.SoftAssertions;
+import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.SoftAssertions.*;
+import static org.mockito.Mockito.*;
+
+import java.net.URI;
+import java.util.Optional;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
+
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 import workshop.structure101.core.AccountType;
 import workshop.structure101.core.CustomerRating;
 import workshop.structure101.core.CustomerRatingService;
@@ -13,24 +18,15 @@ import workshop.structure101.resource.CustomerRatingResource;
 import workshop.structure101.resource.ModifyRatingRequest;
 import workshop.structure101.resource.NewRatingRequest;
 
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
-import java.net.URI;
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.*;
-import static org.assertj.core.api.SoftAssertions.*;
-import static org.mockito.Mockito.*;
-
 public class CustomerRatingResourceBeanTest {
 
     private static final String CUSTOMER_ID = "01234567";
     private static final CustomerRating RATING = new CustomerRating(
-            CUSTOMER_ID,
-            "Otto",
-            "Normalverbraucher",
-            AccountType.PRIVATE,
-            Score.C
+        CUSTOMER_ID,
+        "Otto",
+        "Normalverbraucher",
+        AccountType.PRIVATE,
+        Score.C
     );
     private final CustomerRatingResource underTest;
 

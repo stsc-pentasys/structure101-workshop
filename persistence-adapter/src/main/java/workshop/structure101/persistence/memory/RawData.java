@@ -53,5 +53,6 @@ final class RawData {
         "AG", "GmbH", "S.A.", "Lim.", "Corp", "KG", "S.A.R.L"
     );
 
-    private RawData() {}
+    private RawData() {
+    }
 }

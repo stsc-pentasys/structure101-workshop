@@ -1,32 +1,31 @@
 package workshop.structure101.persistence.memory;
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.*;
+
+import java.util.Optional;
+
 import org.junit.Test;
 import workshop.structure101.core.AccountType;
 import workshop.structure101.core.CustomerRating;
 import workshop.structure101.core.Score;
 import workshop.structure101.persistence.CustomerRatingRepository;
 
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.*;
-
 public class InMemoryCustomerRatingRepositoryTest {
 
     private static final String CUSTOMER_ID = "01234567";
     private static final CustomerRating EXPECTED = new CustomerRating(
-            CUSTOMER_ID,
-            "BASE",
-            "S.A.R.L",
-            AccountType.BUSINESS,
-            Score.E
+        CUSTOMER_ID,
+        "BASE",
+        "S.A.R.L",
+        AccountType.BUSINESS,
+        Score.E
     );
     private static final CustomerRating MODIFIED = new CustomerRating(
-            CUSTOMER_ID,
-            "Otto",
-            "Normalverbraucher",
-            AccountType.PRIVATE,
-            Score.A
+        CUSTOMER_ID,
+        "Otto",
+        "Normalverbraucher",
+        AccountType.PRIVATE,
+        Score.A
     );
 
     private final CustomerRatingRepository underTest = new InMemoryCustomerRatingRepository();

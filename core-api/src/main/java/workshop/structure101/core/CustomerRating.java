@@ -60,10 +60,10 @@ public class CustomerRating {
         if (o == null || getClass() != o.getClass()) return false;
         CustomerRating that = (CustomerRating) o;
         return Objects.equals(customerId, that.customerId) &&
-                Objects.equals(firstName, that.firstName) &&
-                Objects.equals(lastName, that.lastName) &&
-                accountType == that.accountType &&
-                score == that.score;
+            Objects.equals(firstName, that.firstName) &&
+            Objects.equals(lastName, that.lastName) &&
+            accountType == that.accountType &&
+            score == that.score;
     }
 
     @Override
