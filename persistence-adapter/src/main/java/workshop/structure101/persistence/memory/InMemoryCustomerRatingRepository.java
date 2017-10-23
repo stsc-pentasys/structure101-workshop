@@ -5,6 +5,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import workshop.structure101.core.AccountType;
 import workshop.structure101.core.CustomerRating;
 import workshop.structure101.core.Score;
@@ -13,6 +15,7 @@ import workshop.structure101.persistence.PersistenceException;
 
 public class InMemoryCustomerRatingRepository implements CustomerRatingRepository {
 
+    private static final Logger LOG = LoggerFactory.getLogger(InMemoryCustomerRatingRepository.class);
     private final Set<String> deleted;
     private final ConcurrentMap<String, CustomerRating> updated;
 
@@ -24,9 +27,11 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
     @Override
     public Optional<CustomerRating> selectById(String customerId) {
         if (deleted.contains(customerId)) {
+            LOG.info("No rating available for customerId {} because it was already deleted.", customerId);
             return Optional.empty();
         }
         CustomerRating rating = updated.getOrDefault(customerId, generateCustomerRating(customerId));
+        LOG.info("Retrieved rating {}", rating);
         return Optional.of(rating);
     }
 
@@ -68,7 +73,6 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
         }
     }
 
-
     @Override
     public Optional<CustomerRating> deleteById(String customerId) {
         deleted.add(customerId);
@@ -76,22 +80,29 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
         if (removed == null) {
             removed = generateCustomerRating(customerId);
         }
+        LOG.info("Deleted rating {}", removed);
         return Optional.of(removed);
     }
 
     @Override
     public Optional<CustomerRating> update(CustomerRating modifiedRating) {
-        if (deleted.contains(modifiedRating.getCustomerId())) {
+        String customerId = modifiedRating.getCustomerId();
+        if (deleted.contains(customerId)) {
+            LOG.info("Could not update rating with customerId {}. It's already deleted.", customerId);
             return Optional.empty();
         }
+        LOG.info("Updated rating {}", modifiedRating);
         return store(modifiedRating);
     }
 
     @Override
     public Optional<CustomerRating> insert(CustomerRating newRating) {
-        if (updated.containsKey(newRating.getCustomerId())) {
+        String customerId = newRating.getCustomerId();
+        if (updated.containsKey(customerId)) {
+            LOG.info("Could not insert new rating with customerId {}. It already exists.", customerId);
             return Optional.empty();
         }
+        LOG.info("Created rating {}", newRating);
         return store(newRating);
     }
 

@@ -4,6 +4,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import workshop.structure101.core.ErrorCode;
 import workshop.structure101.core.ServiceException;
 import workshop.structure101.resource.ErrorMessage;
@@ -15,6 +17,8 @@ import workshop.structure101.resource.ErrorMessage;
 @Provider
 public class ServiceExceptionMapper implements ExceptionMapper<ServiceException> {
 
+    private static final Logger LOG = LoggerFactory.getLogger(ServiceExceptionMapper.class);
+
     @Override
     public Response toResponse(ServiceException exception) {
         ErrorCode errorCode = exception.getErrorCode();
@@ -22,6 +26,7 @@ public class ServiceExceptionMapper implements ExceptionMapper<ServiceException>
             errorCode.getCode(),
             errorCode.getMessage(),
             exception.getDescription());
+        LOG.error("System error {}", errorMessage);
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(errorMessage).build();
     }
 }
