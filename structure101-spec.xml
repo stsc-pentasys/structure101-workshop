@@ -28,19 +28,47 @@
             <cell name="Adapter" pattern="" vexpanded="true" illegal="false" visibility="public" drill="true" bgcolor="255,204,204">
               <grid>
                 <row>
+                  <cell name="persistence-api" pattern="persistence-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="persistence-api.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="persistence-api.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="persistence" pattern="persistence-api.workshop.structure101.persistence.?" vexpanded="false" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="CustomerRatingRepository" pattern="persistence-api.workshop.structure101.persistence.CustomerRatingRepository" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="PersistenceException" pattern="persistence-api.workshop.structure101.persistence.PersistenceException" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                </row>
+                <row>
                   <cell name="notification-adapter" pattern="notification-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                     <grid>
                       <row>
-                        <cell name="workshop" pattern="notification-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                        <cell name="workshop" pattern="notification-adapter.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                           <grid>
                             <row>
-                              <cell name="structure101" pattern="notification-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                              <cell name="structure101" pattern="notification-adapter.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                 <grid>
                                   <row>
-                                    <cell name="notification" pattern="notification-adapter.workshop.structure101.notification.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                    <cell name="notification" pattern="notification-adapter.workshop.structure101.notification.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                       <grid>
                                         <row>
-                                          <cell name="log" pattern="notification-adapter.workshop.structure101.notification.log.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                          <cell name="log" pattern="notification-adapter.workshop.structure101.notification.log.?" vexpanded="false" illegal="false" visibility="public" drill="true">
                                             <grid>
                                               <row>
                                                 <cell name="NotificationConfig" pattern="notification-adapter.workshop.structure101.notification.log.NotificationConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
@@ -65,16 +93,16 @@
                   <cell name="messaging-adapter" pattern="messaging-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                     <grid>
                       <row>
-                        <cell name="workshop" pattern="messaging-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                        <cell name="workshop" pattern="messaging-adapter.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                           <grid>
                             <row>
-                              <cell name="structure101" pattern="messaging-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                              <cell name="structure101" pattern="messaging-adapter.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                 <grid>
                                   <row>
-                                    <cell name="messaging" pattern="messaging-adapter.workshop.structure101.messaging.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                    <cell name="messaging" pattern="messaging-adapter.workshop.structure101.messaging.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                       <grid>
                                         <row>
-                                          <cell name="jms" pattern="messaging-adapter.workshop.structure101.messaging.jms.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                          <cell name="jms" pattern="messaging-adapter.workshop.structure101.messaging.jms.?" vexpanded="false" illegal="false" visibility="public" drill="true">
                                             <grid>
                                               <row>
                                                 <cell name="MessagingConfig" pattern="messaging-adapter.workshop.structure101.messaging.jms.MessagingConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
@@ -105,16 +133,16 @@
                   <cell name="persistence-adapter" pattern="persistence-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                     <grid>
                       <row>
-                        <cell name="workshop" pattern="persistence-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                        <cell name="workshop" pattern="persistence-adapter.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                           <grid>
                             <row>
-                              <cell name="structure101" pattern="persistence-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                              <cell name="structure101" pattern="persistence-adapter.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                 <grid>
                                   <row>
-                                    <cell name="persistence" pattern="persistence-adapter.workshop.structure101.persistence.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                    <cell name="persistence" pattern="persistence-adapter.workshop.structure101.persistence.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                       <grid>
                                         <row>
-                                          <cell name="memory" pattern="persistence-adapter.workshop.structure101.persistence.memory.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                          <cell name="memory" pattern="persistence-adapter.workshop.structure101.persistence.memory.?" vexpanded="false" illegal="false" visibility="public" drill="true">
                                             <grid>
                                               <row>
                                                 <cell name="PersistenceConfig" pattern="persistence-adapter.workshop.structure101.persistence.memory.PersistenceConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
@@ -143,16 +171,16 @@
                   <cell name="resource-adapter" pattern="resource-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                     <grid>
                       <row>
-                        <cell name="workshop" pattern="resource-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                        <cell name="workshop" pattern="resource-adapter.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                           <grid>
                             <row>
-                              <cell name="structure101" pattern="resource-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                              <cell name="structure101" pattern="resource-adapter.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                 <grid>
                                   <row>
-                                    <cell name="resource" pattern="resource-adapter.workshop.structure101.resource.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                    <cell name="resource" pattern="resource-adapter.workshop.structure101.resource.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                       <grid>
                                         <row>
-                                          <cell name="jersey" pattern="resource-adapter.workshop.structure101.resource.jersey.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                          <cell name="jersey" pattern="resource-adapter.workshop.structure101.resource.jersey.?" vexpanded="false" illegal="false" visibility="public" drill="true">
                                             <grid>
                                               <row>
                                                 <cell name="ResourcesConfig" pattern="resource-adapter.workshop.structure101.resource.jersey.ResourcesConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
@@ -225,13 +253,13 @@
                   <cell name="notification-api" pattern="notification-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                     <grid>
                       <row>
-                        <cell name="workshop" pattern="notification-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                        <cell name="workshop" pattern="notification-api.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                           <grid>
                             <row>
-                              <cell name="structure101" pattern="notification-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                              <cell name="structure101" pattern="notification-api.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                 <grid>
                                   <row>
-                                    <cell name="notification" pattern="notification-api.workshop.structure101.notification.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                    <cell name="notification" pattern="notification-api.workshop.structure101.notification.?" vexpanded="false" illegal="false" visibility="public" drill="true">
                                       <grid>
                                         <row>
                                           <cell name="NotificationPort" pattern="notification-api.workshop.structure101.notification.NotificationPort" vexpanded="false" illegal="false" visibility="public" drill="false" />
@@ -253,13 +281,13 @@
                   <cell name="resource-api" pattern="resource-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                     <grid>
                       <row>
-                        <cell name="workshop" pattern="resource-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                        <cell name="workshop" pattern="resource-api.workshop.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                           <grid>
                             <row>
-                              <cell name="structure101" pattern="resource-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                              <cell name="structure101" pattern="resource-api.workshop.structure101.*" vexpanded="false" illegal="false" visibility="public" drill="true">
                                 <grid>
                                   <row>
-                                    <cell name="resource" pattern="resource-api.workshop.structure101.resource.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                    <cell name="resource" pattern="resource-api.workshop.structure101.resource.?" vexpanded="false" illegal="false" visibility="public" drill="true">
                                       <grid>
                                         <row>
                                           <cell name="CustomerRatingResource" pattern="resource-api.workshop.structure101.resource.CustomerRatingResource" vexpanded="false" illegal="false" visibility="public" drill="false" />
@@ -268,32 +296,6 @@
                                           <cell name="ErrorMessage" pattern="resource-api.workshop.structure101.resource.ErrorMessage" vexpanded="false" illegal="false" visibility="public" drill="false" />
                                           <cell name="ModifyRatingRequest" pattern="resource-api.workshop.structure101.resource.ModifyRatingRequest" vexpanded="false" illegal="false" visibility="public" drill="false" />
                                           <cell name="NewRatingRequest" pattern="resource-api.workshop.structure101.resource.NewRatingRequest" vexpanded="false" illegal="false" visibility="public" drill="false" />
-                                        </row>
-                                      </grid>
-                                    </cell>
-                                  </row>
-                                </grid>
-                              </cell>
-                            </row>
-                          </grid>
-                        </cell>
-                      </row>
-                    </grid>
-                  </cell>
-                  <cell name="persistence-api" pattern="persistence-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
-                    <grid>
-                      <row>
-                        <cell name="workshop" pattern="persistence-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
-                          <grid>
-                            <row>
-                              <cell name="structure101" pattern="persistence-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
-                                <grid>
-                                  <row>
-                                    <cell name="persistence" pattern="persistence-api.workshop.structure101.persistence.?" vexpanded="true" illegal="false" visibility="public" drill="true">
-                                      <grid>
-                                        <row>
-                                          <cell name="CustomerRatingRepository" pattern="persistence-api.workshop.structure101.persistence.CustomerRatingRepository" vexpanded="false" illegal="false" visibility="public" drill="false" />
-                                          <cell name="PersistenceException" pattern="persistence-api.workshop.structure101.persistence.PersistenceException" vexpanded="false" illegal="false" visibility="public" drill="false" />
                                         </row>
                                       </grid>
                                     </cell>
