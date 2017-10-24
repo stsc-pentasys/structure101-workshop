@@ -32,7 +32,7 @@ public class StringMessageReceiver {
 
     @JmsListener(destination = "${workshop.structure101.destinationIn}")
     public void receive(String message) {
-        LOG.info("Received message {}", message);
+        LOG.info("Received message '{}#", message);
 
         try {
             CustomerRating customerRating = mapper.fromString(message);
