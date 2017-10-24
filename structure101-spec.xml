@@ -1,0 +1,354 @@
+<physical-grid-set sep="." version="4.2.12639">
+  <grid name="Structure Spec" enforce="true" locked="true" strict="false">
+    <row>
+      <cell pattern="" vexpanded="true" illegal="false" visibility="public" drill="true" bgcolor="255,255,255">
+        <grid>
+          <row>
+            <cell name="application" pattern="application.*" vexpanded="false" illegal="false" visibility="public" drill="true" bgcolor="255,255,204">
+              <grid>
+                <row>
+                  <cell name="workshop" pattern="application.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="structure101" pattern="application.workshop.structure101.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="CustomerRatingApplication" pattern="application.workshop.structure101.CustomerRatingApplication" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                </row>
+              </grid>
+            </cell>
+          </row>
+          <row>
+            <cell name="Adapter" pattern="" vexpanded="true" illegal="false" visibility="public" drill="true" bgcolor="255,204,204">
+              <grid>
+                <row>
+                  <cell name="notification-adapter" pattern="notification-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="notification-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="notification-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="notification" pattern="notification-adapter.workshop.structure101.notification.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="log" pattern="notification-adapter.workshop.structure101.notification.log.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                            <grid>
+                                              <row>
+                                                <cell name="NotificationConfig" pattern="notification-adapter.workshop.structure101.notification.log.NotificationConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="LoggingNotificationAdapter" pattern="notification-adapter.workshop.structure101.notification.log.LoggingNotificationAdapter" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                            </grid>
+                                          </cell>
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                  <cell name="messaging-adapter" pattern="messaging-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="messaging-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="messaging-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="messaging" pattern="messaging-adapter.workshop.structure101.messaging.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="jms" pattern="messaging-adapter.workshop.structure101.messaging.jms.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                            <grid>
+                                              <row>
+                                                <cell name="MessagingConfig" pattern="messaging-adapter.workshop.structure101.messaging.jms.MessagingConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="StringMessageReceiver" pattern="messaging-adapter.workshop.structure101.messaging.jms.StringMessageReceiver" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="CustomerRatingMapper" pattern="messaging-adapter.workshop.structure101.messaging.jms.CustomerRatingMapper" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="MappingException" pattern="messaging-adapter.workshop.structure101.messaging.jms.MappingException" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                            </grid>
+                                          </cell>
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                  <cell name="persistence-adapter" pattern="persistence-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="persistence-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="persistence-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="persistence" pattern="persistence-adapter.workshop.structure101.persistence.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="memory" pattern="persistence-adapter.workshop.structure101.persistence.memory.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                            <grid>
+                                              <row>
+                                                <cell name="PersistenceConfig" pattern="persistence-adapter.workshop.structure101.persistence.memory.PersistenceConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="InMemoryCustomerRatingRepository" pattern="persistence-adapter.workshop.structure101.persistence.memory.InMemoryCustomerRatingRepository" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="DataGenerator" pattern="persistence-adapter.workshop.structure101.persistence.memory.DataGenerator" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                                <cell name="RawData" pattern="persistence-adapter.workshop.structure101.persistence.memory.RawData" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                            </grid>
+                                          </cell>
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                  <cell name="resource-adapter" pattern="resource-adapter.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="resource-adapter.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="resource-adapter.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="resource" pattern="resource-adapter.workshop.structure101.resource.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="jersey" pattern="resource-adapter.workshop.structure101.resource.jersey.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                            <grid>
+                                              <row>
+                                                <cell name="ResourcesConfig" pattern="resource-adapter.workshop.structure101.resource.jersey.ResourcesConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="CustomerRatingResourceBean" pattern="resource-adapter.workshop.structure101.resource.jersey.CustomerRatingResourceBean" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="ServiceExceptionMapper" pattern="resource-adapter.workshop.structure101.resource.jersey.ServiceExceptionMapper" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                                <cell name="UriBuilder" pattern="resource-adapter.workshop.structure101.resource.jersey.UriBuilder" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                            </grid>
+                                          </cell>
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                </row>
+              </grid>
+            </cell>
+          </row>
+          <row>
+            <cell name="Core" pattern="" vexpanded="true" illegal="false" visibility="public" drill="true" bgcolor="204,255,204">
+              <grid>
+                <row>
+                  <cell name="core-impl" pattern="core-impl.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="core-impl.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="core-impl.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="core" pattern="core-impl.workshop.structure101.core.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="impl" pattern="core-impl.workshop.structure101.core.impl.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                            <grid>
+                                              <row>
+                                                <cell name="CoreConfig" pattern="core-impl.workshop.structure101.core.impl.CoreConfig" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                              <row>
+                                                <cell name="CustomerRatingServiceBean" pattern="core-impl.workshop.structure101.core.impl.CustomerRatingServiceBean" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                              </row>
+                                            </grid>
+                                          </cell>
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                </row>
+                <row>
+                  <cell name="notification-api" pattern="notification-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="notification-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="notification-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="notification" pattern="notification-api.workshop.structure101.notification.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="NotificationPort" pattern="notification-api.workshop.structure101.notification.NotificationPort" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                        <row>
+                                          <cell name="CustomerRatingEvent" pattern="notification-api.workshop.structure101.notification.CustomerRatingEvent" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                  <cell name="resource-api" pattern="resource-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="resource-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="resource-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="resource" pattern="resource-api.workshop.structure101.resource.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="CustomerRatingResource" pattern="resource-api.workshop.structure101.resource.CustomerRatingResource" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                        <row>
+                                          <cell name="ErrorMessage" pattern="resource-api.workshop.structure101.resource.ErrorMessage" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="ModifyRatingRequest" pattern="resource-api.workshop.structure101.resource.ModifyRatingRequest" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="NewRatingRequest" pattern="resource-api.workshop.structure101.resource.NewRatingRequest" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                  <cell name="persistence-api" pattern="persistence-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="persistence-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="persistence-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="persistence" pattern="persistence-api.workshop.structure101.persistence.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="CustomerRatingRepository" pattern="persistence-api.workshop.structure101.persistence.CustomerRatingRepository" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="PersistenceException" pattern="persistence-api.workshop.structure101.persistence.PersistenceException" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                </row>
+                <row>
+                  <cell name="core-api" pattern="core-api.*" vexpanded="false" illegal="false" visibility="public" drill="true">
+                    <grid>
+                      <row>
+                        <cell name="workshop" pattern="core-api.workshop.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                          <grid>
+                            <row>
+                              <cell name="structure101" pattern="core-api.workshop.structure101.*" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                <grid>
+                                  <row>
+                                    <cell name="core" pattern="core-api.workshop.structure101.core.?" vexpanded="true" illegal="false" visibility="public" drill="true">
+                                      <grid>
+                                        <row>
+                                          <cell name="CustomerRatingService" pattern="core-api.workshop.structure101.core.CustomerRatingService" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                        <row>
+                                          <cell name="CustomerRating" pattern="core-api.workshop.structure101.core.CustomerRating" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="ServiceException" pattern="core-api.workshop.structure101.core.ServiceException" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                        <row>
+                                          <cell name="AccountType" pattern="core-api.workshop.structure101.core.AccountType" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="ErrorCode" pattern="core-api.workshop.structure101.core.ErrorCode" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                          <cell name="Score" pattern="core-api.workshop.structure101.core.Score" vexpanded="false" illegal="false" visibility="public" drill="false" />
+                                        </row>
+                                      </grid>
+                                    </cell>
+                                  </row>
+                                </grid>
+                              </cell>
+                            </row>
+                          </grid>
+                        </cell>
+                      </row>
+                    </grid>
+                  </cell>
+                </row>
+              </grid>
+            </cell>
+          </row>
+        </grid>
+      </cell>
+    </row>
+    <description>Top-level breakout</description>
+  </grid>
+</physical-grid-set>
