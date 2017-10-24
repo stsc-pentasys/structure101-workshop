@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import workshop.structure101.core.CustomerRatingService;
 import workshop.structure101.notification.NotificationPort;
-import workshop.structure101.persistence.CustomerRatingRepository;
+import workshop.structure101.persistence.memory.InMemoryCustomerRatingRepository;
 
 /**
  * @author Stefan Schulze, PENTASYS AG
@@ -16,7 +16,7 @@ public class CoreConfig {
     @Bean
     public CustomerRatingService customerRatingService(
         NotificationPort notificationPort,
-        CustomerRatingRepository repository) {
+        InMemoryCustomerRatingRepository repository) {
         return new CustomerRatingServiceBean(notificationPort, repository);
     }
 }

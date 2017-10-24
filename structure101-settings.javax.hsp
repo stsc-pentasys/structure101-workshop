@@ -47,6 +47,7 @@
     <classpathentry kind="lib" path="notification-api/target/classes" base="notification-api" />
     <classpathentry kind="lib" path="SEPARATOR" />
     <classpathentry kind="lib" path="core-impl/target/classes" base="core-impl" />
+    <classpathentry kind="lib" path="persistence-adapter/target/classes" base="persistence-adapter" />
     <classpathentry kind="lib" path="core-api/target/classes" base="core-api" />
     <classpathentry kind="lib" path="notification-api/target/classes" base="notification-api" />
     <classpathentry kind="lib" path="persistence-api/target/classes" base="persistence-api" />
