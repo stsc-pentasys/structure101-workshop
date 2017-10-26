@@ -1,7 +1,7 @@
 package workshop.structure101.resource.jersey;
 
-import java.net.URI;
 import javax.ws.rs.core.UriInfo;
+import java.net.URI;
 
 import workshop.structure101.core.CustomerRating;
 

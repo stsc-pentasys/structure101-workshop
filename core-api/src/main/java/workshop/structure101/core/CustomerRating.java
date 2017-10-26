@@ -56,8 +56,12 @@ public class CustomerRating {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         CustomerRating that = (CustomerRating) o;
         return Objects.equals(customerId, that.customerId) &&
             Objects.equals(firstName, that.firstName) &&

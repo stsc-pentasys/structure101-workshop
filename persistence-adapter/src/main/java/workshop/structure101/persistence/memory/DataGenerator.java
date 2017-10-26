@@ -11,12 +11,12 @@ class DataGenerator {
 
     private Random random;
 
-    DataGenerator(long seed) {
-        this.random = new Random(seed);
-    }
-
     public DataGenerator(String seed) {
         this(seed.hashCode());
+    }
+
+    DataGenerator(long seed) {
+        this.random = new Random(seed);
     }
 
     <T> T fromList(List<T> values) {

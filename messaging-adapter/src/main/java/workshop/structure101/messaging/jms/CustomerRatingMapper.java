@@ -21,13 +21,14 @@ class CustomerRatingMapper {
     CustomerRating fromString(String rating) {
         String[] fields = rating.split(";");
         try {
-        return new CustomerRating(
-            fields[0],
-            fields[1],
-            fields[2],
-            AccountType.valueOf(fields[3]),
-            Score.valueOf(fields[4])
-        ); } catch (IllegalArgumentException e) {
+            return new CustomerRating(
+                fields[0],
+                fields[1],
+                fields[2],
+                AccountType.valueOf(fields[3]),
+                Score.valueOf(fields[4])
+            );
+        } catch (IllegalArgumentException e) {
             throw new MappingException(e);
         }
     }

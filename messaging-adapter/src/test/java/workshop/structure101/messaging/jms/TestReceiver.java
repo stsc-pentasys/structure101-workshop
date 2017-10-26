@@ -18,7 +18,7 @@ public class TestReceiver {
     private String message;
 
     @JmsListener(destination = "${workshop.structure101.destinationError}")
-    public void receive(@Payload String message){
+    public void receive(@Payload String message) {
         this.message = message;
         counter.countDown();
     }
