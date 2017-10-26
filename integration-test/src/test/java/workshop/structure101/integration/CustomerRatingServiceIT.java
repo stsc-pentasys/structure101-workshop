@@ -35,9 +35,9 @@ public class CustomerRatingServiceIT extends ITBase {
     public void successfulGet() throws Exception {
         given()
             .pathParam("customerId", CUSTOMER_ID)
-        .when()
+            .when()
             .get("/{customerId}")
-        .then()
+            .then()
             .statusCode(200)
             .contentType(ContentType.JSON)
             .body("customerId", equalTo(CUSTOMER_ID))
@@ -52,9 +52,9 @@ public class CustomerRatingServiceIT extends ITBase {
     public void getAfterDelete() throws Exception {
         given()
             .pathParam("customerId", CUSTOMER_ID)
-        .when()
+            .when()
             .delete("/{customerId}")
-        .then()
+            .then()
             .statusCode(202)
             .body("customerId", equalTo(CUSTOMER_ID))
             .body("firstName", equalTo("BASE"))
@@ -64,9 +64,9 @@ public class CustomerRatingServiceIT extends ITBase {
 
         given()
             .pathParam("customerId", CUSTOMER_ID)
-        .when()
+            .when()
             .get("/{customerId}")
-        .then()
+            .then()
             .statusCode(404);
     }
 
@@ -77,9 +77,9 @@ public class CustomerRatingServiceIT extends ITBase {
             .pathParam("customerId", CUSTOMER_ID)
             .body(MODIFY_REQUEST)
             .contentType(ContentType.JSON)
-        .when()
+            .when()
             .put("/{customerId}")
-        .then()
+            .then()
             .statusCode(202)
             .body("customerId", equalTo(CUSTOMER_ID))
             .body("firstName", equalTo("Otto"))
@@ -94,9 +94,9 @@ public class CustomerRatingServiceIT extends ITBase {
         given()
             .body(CREATE_REQUEST)
             .contentType(ContentType.JSON)
-        .when()
+            .when()
             .post()
-        .then()
+            .then()
             .statusCode(201)
             .header("Location", endsWith("/rating/01234567"));
 

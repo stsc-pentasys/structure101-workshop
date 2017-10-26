@@ -16,16 +16,16 @@ import workshop.structure101.core.CustomerRatingService;
 public class MessagingConfig {
 
     @Bean
-    public CustomerRatingMapper customerRatingMapper() {
-        return new CustomerRatingMapper();
-    }
-
-    @Bean
     public StringMessageReceiver stringMessageReceiver(
         JmsTemplate template,
         @Value("${workshop.structure101.destinationError}") String errorDestination,
         CustomerRatingService service) {
         return new StringMessageReceiver(service, customerRatingMapper(), template, errorDestination);
+    }
+
+    @Bean
+    public CustomerRatingMapper customerRatingMapper() {
+        return new CustomerRatingMapper();
     }
 
 }

@@ -4,10 +4,10 @@ import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.SoftAssertions.*;
 import static org.mockito.Mockito.*;
 
-import java.net.URI;
-import java.util.Optional;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import java.net.URI;
+import java.util.Optional;
 
 import org.junit.Test;
 import workshop.structure101.core.AccountType;
@@ -68,14 +68,6 @@ public class CustomerRatingResourceBeanTest {
         });
     }
 
-    @Test
-    public void failedPut() throws Exception {
-        when(serviceMock.modifyById(RATING)).thenReturn(Optional.empty());
-        ModifyRatingRequest request = createPutRequest();
-        Response response = underTest.putExistingRating(CUSTOMER_ID, request);
-        assertThat(response.getStatus()).isEqualTo(404);
-    }
-
     private ModifyRatingRequest createPutRequest() {
         ModifyRatingRequest request = new ModifyRatingRequest();
         request.setFirstName(RATING.getFirstName());
@@ -85,6 +77,13 @@ public class CustomerRatingResourceBeanTest {
         return request;
     }
 
+    @Test
+    public void failedPut() throws Exception {
+        when(serviceMock.modifyById(RATING)).thenReturn(Optional.empty());
+        ModifyRatingRequest request = createPutRequest();
+        Response response = underTest.putExistingRating(CUSTOMER_ID, request);
+        assertThat(response.getStatus()).isEqualTo(404);
+    }
 
     @Test
     public void successfulDelete() throws Exception {
@@ -116,14 +115,6 @@ public class CustomerRatingResourceBeanTest {
         });
     }
 
-    @Test
-    public void failedPost() throws Exception {
-        when(serviceMock.createNewRating(RATING)).thenReturn(Optional.empty());
-        UriInfo uriInfo = mock(UriInfo.class);
-        Response response = underTest.postNewRating(createPostRequest(), uriInfo);
-        assertThat(response.getStatus()).isEqualTo(409);
-    }
-
     private NewRatingRequest createPostRequest() {
         NewRatingRequest request = new NewRatingRequest();
         request.setCustomerId(CUSTOMER_ID);
@@ -132,6 +123,14 @@ public class CustomerRatingResourceBeanTest {
         request.setTypeOfAccount(RATING.getAccountType().name());
         request.setRating(RATING.getScore().name());
         return request;
+    }
+
+    @Test
+    public void failedPost() throws Exception {
+        when(serviceMock.createNewRating(RATING)).thenReturn(Optional.empty());
+        UriInfo uriInfo = mock(UriInfo.class);
+        Response response = underTest.postNewRating(createPostRequest(), uriInfo);
+        assertThat(response.getStatus()).isEqualTo(409);
     }
 
 }

@@ -46,14 +46,14 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
 
     private String getFirstName(AccountType accountType, DataGenerator dataGenerator) {
         return accountType == AccountType.PRIVATE ?
-            dataGenerator.fromList(RawData.FIRST_NAMES) :
-            dataGenerator.fromList(RawData.COMPANY_NAMES);
+               dataGenerator.fromList(RawData.FIRST_NAMES) :
+               dataGenerator.fromList(RawData.COMPANY_NAMES);
     }
 
     private String getLastName(AccountType accountType, DataGenerator dataGenerator) {
         return accountType == AccountType.PRIVATE ?
-            dataGenerator.fromList(RawData.LAST_NAMES) :
-            dataGenerator.fromList(RawData.COMPANY_EXT);
+               dataGenerator.fromList(RawData.LAST_NAMES) :
+               dataGenerator.fromList(RawData.COMPANY_EXT);
     }
 
     private Score getScore(DataGenerator dataGenerator) {
@@ -95,6 +95,11 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
         return store(modifiedRating);
     }
 
+    private Optional<CustomerRating> store(CustomerRating rating) {
+        updated.put(rating.getCustomerId(), rating);
+        return Optional.of(rating);
+    }
+
     @Override
     public Optional<CustomerRating> insert(CustomerRating newRating) {
         String customerId = newRating.getCustomerId();
@@ -104,10 +109,5 @@ public class InMemoryCustomerRatingRepository implements CustomerRatingRepositor
         }
         LOG.info("Created rating {}", newRating);
         return store(newRating);
-    }
-
-    private Optional<CustomerRating> store(CustomerRating rating) {
-        updated.put(rating.getCustomerId(), rating);
-        return Optional.of(rating);
     }
 }

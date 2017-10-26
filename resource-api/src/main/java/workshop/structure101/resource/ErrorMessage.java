@@ -42,8 +42,12 @@ public class ErrorMessage {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         ErrorMessage that = (ErrorMessage) o;
         return Objects.equals(errorCode, that.errorCode) &&
             Objects.equals(errorMessage, that.errorMessage) &&

@@ -2,6 +2,7 @@ package workshop.structure101.persistence.memory;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import workshop.structure101.persistence.CustomerRatingRepository;
 
 /**
  * @author Stefan Schulze, PENTASYS AG
@@ -11,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class PersistenceConfig {
 
     @Bean
-    public InMemoryCustomerRatingRepository customerRatingRepository() {
+    public CustomerRatingRepository customerRatingRepository() {
         return new InMemoryCustomerRatingRepository();
     }
 }
